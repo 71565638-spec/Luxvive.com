@@ -1,0 +1,540 @@
+/* =============================================
+   LuxVive – Turismo Vivencial de Lujo
+   styles.css  |  HTML5 + CSS3 Responsive
+   ============================================= */
+
+/* ---- RESET & VARIABLES ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-dark:    #0d0d0d;
+  --color-gold:    #c9a84c;
+  --color-gold-lt: #e8c97a;
+  --color-cream:   #f7f3ec;
+  --color-mist:    #e8e2d9;
+  --color-text:    #1a1a1a;
+  --color-subtle:  #6b6456;
+  --color-white:   #ffffff;
+
+  --font-display: 'Georgia', 'Times New Roman', serif;
+  --font-body:    'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+  --radius-card:  12px;
+  --shadow-card:  0 8px 32px rgba(0,0,0,0.12);
+  --transition:   0.4s ease;
+
+  --max-width: 1200px;
+  --section-pad: 80px 24px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-text);
+  line-height: 1.65;
+}
+
+/* ---- TIPOGRAFÍA BASE ---- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-dark);
+  border-bottom: 1px solid rgba(201,168,76,0.25);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+}
+
+.logo-lux  { color: var(--color-gold); }
+.logo-vive { color: var(--color-white); }
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  color: var(--color-mist);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  -webkit-transition: color var(--transition);
+          transition: color var(--transition);
+}
+
+.main-nav a:hover {
+  color: var(--color-gold);
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  background: linear-gradient(135deg, var(--color-dark) 60%, #1e1409 100%);
+  color: var(--color-white);
+  padding: 120px 24px 100px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  margin-bottom: 20px;
+  color: var(--color-white);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--color-mist);
+  margin-bottom: 36px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =============================================
+   BOTÓN PRINCIPAL
+   ============================================= */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-gold);
+  color: var(--color-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  border-radius: 4px;
+  border: 2px solid var(--color-gold);
+  cursor: pointer;
+  -webkit-transition: background-color var(--transition), color var(--transition), -webkit-transform 0.2s ease;
+          transition: background-color var(--transition), color var(--transition), transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-gold);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.btn-full {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* =============================================
+   ENCABEZADOS DE SECCIÓN
+   ============================================= */
+.section-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.section-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--color-dark);
+}
+
+/* =============================================
+   ACTIVIDAD 1 – GALERÍA MULTIMEDIA
+   ============================================= */
+.section-destinos {
+  padding: var(--section-pad);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Grid de 3 columnas en desktop, adaptativo */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ---- TARJETA DE DESTINO ---- */
+.destination-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  /* Transición aplicada al hover del contenedor */
+  -webkit-transition: -webkit-box-shadow var(--transition);
+          transition: box-shadow var(--transition);
+}
+
+.destination-card:hover {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+}
+
+/* Imagen responsive */
+.destination-card .responsive-img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  /* TRANSICIÓN CSS requerida por la práctica: escala en 0.4s */
+  -webkit-transition: -webkit-transform var(--transition);
+          transition: transform var(--transition);
+}
+
+.destination-card:hover .responsive-img {
+  /* transform: scale(1.05) – requerido por la rúbrica */
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* Figcaption: leyenda con transición de opacidad */
+.destination-card figcaption {
+  padding: 24px;
+  -webkit-transition: opacity var(--transition);
+          transition: opacity var(--transition);
+}
+
+.destination-card:hover figcaption {
+  opacity: 0.85;
+}
+
+.card-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  background-color: rgba(201,168,76,0.1);
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.destination-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: var(--color-dark);
+}
+
+.destination-card p {
+  font-size: 0.88rem;
+  color: var(--color-subtle);
+  margin-bottom: 14px;
+}
+
+.card-price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+/* =============================================
+   ACTIVIDAD 2 – TABLA DE TARIFAS
+   ============================================= */
+.section-tarifas {
+  background-color: var(--color-dark);
+  padding: var(--section-pad);
+  color: var(--color-white);
+}
+
+.section-tarifas .section-header h2 {
+  color: var(--color-white);
+}
+
+.table-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  overflow-x: auto; /* scroll horizontal en móvil */
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+/* Caption para accesibilidad */
+.pricing-table caption {
+  caption-side: top;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  padding-bottom: 14px;
+  text-align: left;
+}
+
+/* Cabeceras – fondo corporativo oscuro */
+.pricing-table thead th {
+  background-color: var(--color-gold);
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 18px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Cuerpo de la tabla */
+.pricing-table tbody td {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  vertical-align: middle;
+}
+
+/* Coloración alterna de filas – pseudoclase :nth-child(even) */
+.pricing-table tbody tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.pricing-table tbody tr:hover {
+  background-color: rgba(201,168,76,0.08);
+}
+
+.package-name {
+  font-weight: 600;
+  color: var(--color-gold-lt);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--color-gold);
+  white-space: nowrap;
+}
+
+/* Pie de tabla */
+.pricing-table tfoot td {
+  padding: 12px 18px;
+  font-size: 0.78rem;
+  color: var(--color-subtle);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-style: italic;
+}
+
+/* =============================================
+   ACTIVIDAD 3 – FORMULARIO DE RESERVA
+   ============================================= */
+.section-reserva {
+  padding: var(--section-pad);
+  background-color: var(--color-cream);
+}
+
+.section-reserva .section-header {
+  max-width: var(--max-width);
+  margin: 0 auto 52px;
+}
+
+.form-container {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.form-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: 44px 40px;
+  box-shadow: var(--shadow-card);
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-subtle);
+  margin-bottom: 7px;
+}
+
+.form-group strong {
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
+/* Inputs, select */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--color-mist);
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background-color: #fafafa;
+  -webkit-transition: border-color var(--transition), box-shadow var(--transition);
+          transition: border-color var(--transition), box-shadow var(--transition);
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+}
+
+/* Validación nativa: verde si válido, rojo si inválido (solo tras interacción) */
+.form-group input:not(:placeholder-shown):valid {
+  border-color: #4caf50;
+}
+
+.form-group input:not(:placeholder-shown):invalid {
+  border-color: #e53935;
+}
+
+/* Slider de presupuesto */
+.form-group input[type="range"] {
+  display: block;
+  width: 100%;
+  height: 6px;
+  border: none;
+  padding: 0;
+  accent-color: var(--color-gold);
+  cursor: pointer;
+  background: transparent;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--color-subtle);
+  margin-top: 6px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.site-footer {
+  background-color: var(--color-dark);
+  color: var(--color-mist);
+  padding: 36px 24px;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-footer p {
+  font-size: 0.82rem;
+  color: var(--color-subtle);
+}
+
+/* =============================================
+   RESPONSIVE – TABLET (max-width: 1024px)
+   ============================================= */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding: 80px 24px 70px;
+  }
+}
+
+/* =============================================
+   RESPONSIVE – MÓVIL (max-width: 480px)
+   ============================================= */
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main-nav ul {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding: 60px 20px 50px;
+  }
+
+  .form-card {
+    padding: 28px 20px;
+  }
+
+  :root {
+    --section-pad: 52px 20px;
+  }
+}

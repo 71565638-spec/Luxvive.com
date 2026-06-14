@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxVive – Turismo Vivencial de Lujo y Moda Sostenible</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-lux">LUX</span><span class="logo-vive">VIVE</span>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#tarifas">Tarifas</a></li>
+          <li><a href="#reserva">Reservar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-label="Bienvenida">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Experiencias exclusivas · Moda sostenible</p>
+      <h1>Vive el lujo<br>con propósito</h1>
+      <p class="hero-sub">Destinos únicos que fusionan turismo vivencial de alto nivel con la elegancia de la moda artesanal andina.</p>
+      <a href="#reserva" class="btn-primary">Reservar ahora</a>
+    </div>
+  </section>
+
+  <!-- ===== ACTIVIDAD 1: GALERÍA MULTIMEDIA SEMÁNTICA ===== -->
+  <section id="destinos" class="section-destinos">
+    <div class="section-header">
+      <p class="section-eyebrow">Nuestros destinos</p>
+      <h2>Experiencias de élite</h2>
+    </div>
+
+    <div class="gallery-grid">
+
+      <!-- Destino 1: Machu Picchu -->
+      <figure class="destination-card">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="img/machupicchu.jfif" />
+          <source media="(min-width: 768px)"  srcset="img/machupicchu.jfif" />
+          <img src="img/machupicchu.jfif"
+               alt="Vista panorámica de la ciudadela de Machu Picchu bajo el amanecer andino"
+               class="responsive-img" />
+        </picture>
+        <figcaption>
+          <span class="card-tag">Cusco, Perú</span>
+          <h3>Santuario Histórico de Machu Picchu</h3>
+          <p>Experiencia mística premium con guías arqueológicos especializados y noche en lodge de lujo con vistas a la ciudadela.</p>
+          <span class="card-price">Desde $2,800 USD</span>
+        </figcaption>
+      </figure>
+
+      <!-- Destino 2: Colca -->
+      <figure class="destination-card">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="img/cañon de colca.jfif" />
+          <source media="(min-width: 768px)"  srcset="img/cañon de colca.jfif" />
+          <img src="img/cañon de colca.jfif"
+               alt="Cóndores sobrevolando el imponente Cañón del Colca en Arequipa al amanecer"
+               class="responsive-img" />
+        </picture>
+        <figcaption>
+          <span class="card-tag">Arequipa, Perú</span>
+          <h3>Cañón del Colca</h3>
+          <p>Avistamiento privado de cóndores, textilería artesanal de alpaca con maestras tejedoras y spa de aguas termales.</p>
+          <span class="card-price">Desde $1,950 USD</span>
+        </figcaption>
+      </figure>
+
+      <!-- Destino 3: Lago Titicaca -->
+      <figure class="destination-card">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="img/titicaca.jfif" />
+          <source media="(min-width: 768px)"  srcset="img/titicaca.jfif" />
+          <img src="img/titicaca.jfif"
+               alt="Islas flotantes de los Uros en el Lago Titicaca al atardecer con cielos violetas"
+               class="responsive-img" />
+        </picture>
+        <figcaption>
+          <span class="card-tag">Puno, Perú</span>
+          <h3>Lago Titicaca – Islas Uros</h3>
+          <p>Estadía ceremonial en isla privada de totora, talleres de moda sostenible con diseñadores locales y cena gourmet lacustre.</p>
+          <span class="card-price">Desde $2,200 USD</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ===== ACTIVIDAD 2: TABLA COMPARATIVA DE PAQUETES ===== -->
+  <section id="tarifas" class="section-tarifas">
+    <div class="section-header">
+      <p class="section-eyebrow">Comparativa de servicios</p>
+      <h2>Paquetes VIP</h2>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="pricing-table">
+        <caption>Comparación de paquetes turísticos VIP – LuxVive 2025</caption>
+        <thead>
+          <tr>
+            <th scope="col">Paquete</th>
+            <th scope="col">Destinos Incluidos</th>
+            <th scope="col">Alojamiento</th>
+            <th scope="col">Acceso Eventos de Moda</th>
+            <th scope="col">Costo Base</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="package-name">Esencial Andino</td>
+            <td>Machu Picchu</td>
+            <td>★★★★ (4 estrellas)</td>
+            <td>Showroom artesanal</td>
+            <td class="price">$1,200 USD</td>
+          </tr>
+          <tr>
+            <td class="package-name">Élite Vivencial</td>
+            <td>Machu Picchu + Colca</td>
+            <td>★★★★★ (5 estrellas)</td>
+            <td>Desfile privado + taller de teñido</td>
+            <td class="price">$2,800 USD</td>
+          </tr>
+          <tr>
+            <td class="package-name">Gran Tour Imperial</td>
+            <td>Machu Picchu + Colca + Titicaca</td>
+            <td>★★★★★ Boutique Lodge</td>
+            <td>Acceso VIP completo + fitting personal</td>
+            <td class="price">$4,500 USD</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5">* Precios por persona en habitación doble. Incluye traslados internos y guías especializados.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== ACTIVIDAD 3: FORMULARIO DE RESERVA ===== -->
+  <section id="reserva" class="section-reserva">
+    <div class="section-header">
+      <p class="section-eyebrow">Empieza tu aventura</p>
+      <h2>Reserva tu experiencia</h2>
+    </div>
+
+    <div class="form-container">
+      <div class="form-card">
+        <form action="#" method="post" novalidate>
+
+          <!-- Nombre Completo -->
+          <div class="form-group">
+            <label for="nombre">Nombre Completo *</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej. Ana García Torres"
+              required
+              minlength="5"
+              autocomplete="name"
+            />
+          </div>
+
+          <!-- Correo Electrónico -->
+          <div class="form-group">
+            <label for="email">Correo Electrónico *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="usuario@universidad.edu.pe"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <!-- Teléfono -->
+          <div class="form-group">
+            <label for="telefono">Teléfono de Contacto *</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Ej. 987654321"
+              required
+              pattern="[0-9]{7,15}"
+              title="Ingresa solo dígitos (entre 7 y 15 números)"
+            />
+          </div>
+
+          <!-- Fecha de Viaje -->
+          <div class="form-group">
+            <label for="fecha">Fecha Estimada de Viaje *</label>
+            <input
+              type="date"
+              id="fecha"
+              name="fecha"
+              required
+            />
+          </div>
+
+          <!-- Destino Preferido -->
+          <div class="form-group">
+            <label for="destino">Destino Preferido *</label>
+            <select id="destino" name="destino" required>
+              <option value="" disabled selected>Selecciona un destino…</option>
+              <option value="machupicchu">Santuario Histórico de Machu Picchu</option>
+              <option value="colca">Cañón del Colca – Arequipa</option>
+              <option value="titicaca">Lago Titicaca – Islas Uros</option>
+              <option value="tour-completo">Gran Tour Imperial (3 destinos)</option>
+            </select>
+          </div>
+
+          <!-- Presupuesto Máximo (Range) -->
+          <div class="form-group">
+            <label for="presupuesto">
+              Presupuesto Máximo: <strong id="presupuesto-valor">$2,750 USD</strong>
+            </label>
+            <input
+              type="range"
+              id="presupuesto"
+              name="presupuesto"
+              min="500"
+              max="5000"
+              step="50"
+              value="2750"
+              oninput="document.getElementById('presupuesto-valor').textContent = '$' + parseInt(this.value).toLocaleString() + ' USD'"
+            />
+            <div class="range-labels">
+              <span>$500</span>
+              <span>$5,000</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary btn-full">Solicitar mi itinerario</button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="logo">
+        <span class="logo-lux">LUX</span><span class="logo-vive">VIVE</span>
+      </div>
+      <p>© 2025 LuxVive. Turismo Vivencial de Lujo y Moda Sostenible.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
